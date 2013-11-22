@@ -2,16 +2,15 @@
     "manifest_version": 2,
 
     "name": "POE Data Extension",
-    "description": "Feeds Path of Exile data to a given external website.",
+    "description": "Feeds Path of Exile data to POE Source.",
     "version": "1.0",
 
     "permissions": ["http://www.pathofexile.com/*","http://webcdn.pathofexile.com/*", "clipboardWrite", "clipboardRead", "unlimitedStorage", "background"],
-
     "background": {
-        "scripts": [ "background.js"]
+        "scripts": ["poe_service.js"],
+        "persistent": false
     },
-
     "externally_connectable": {
-        "matches": ["http://localhost:3000/*"]
+        "matches": ["*://poe-source.herokuapp.com/*"]
     }
 }

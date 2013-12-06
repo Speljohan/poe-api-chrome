@@ -1,9 +1,10 @@
 {
     "manifest_version": 2,
 
-    "name": "POE Data Extension",
-    "description": "Feeds Path of Exile data to POE Source.",
+    "name": "POESource Extension",
+    "description": "Feeds Path of Exile data to POESource.",
     "version": "1.0",
+    "author": "Johan Ljungberg",
 
     "permissions": ["http://www.pathofexile.com/*","http://webcdn.pathofexile.com/*", "clipboardWrite", "clipboardRead", "unlimitedStorage", "background"],
     "background": {
@@ -12,5 +13,6 @@
     },
     "externally_connectable": {
         "matches": ["*://poe-source.herokuapp.com/*"]
-    }
+    },
+    "web_accessible_resources": ["manifest.json"]
 }
